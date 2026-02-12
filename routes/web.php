@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -16,6 +17,19 @@ Route::get('/mi-nombre', function(){
 Route::get('/contact', function(){
      return view('form');
 });
+Route::get('/store', function () {
+
+    $name = request()->query('name');
+    $email = request()->query('email');
+    $message = request()->query('message');
+
+    if (!$name || !$email || !$message) {
+        return redirect('/contact');
+    }
+
+    return view('resultado', compact('name', 'email', 'message'));
+});
+
 
 Route::get('/php-basico', function(){
 

@@ -83,26 +83,26 @@
 <body>
 
 <div class="card">
+    <h2>Contacto</h2>
 
-<h2>Contacto</h2>
+    <form method="GET" action="/store">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="name" placeholder="Tu nombre" required>
+        </div>
 
-<form method="POST" action="">
-    @csrf
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="ejemplo@email.com" required>
+        </div>
 
-    <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="email" placeholder="ejemplo@email.com" required>
-    </div>
+        <div class="form-group">
+            <label>Mensaje</label>
+            <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
 
-    <div class="form-group">
-        <label>Mensaje</label>
-        <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-    </div>
-
-    <button type="submit">Enviar</button>
-
-</form>
-
+        <button type="submit">Enviar</button>
+    </form>
 </div>
 
 </body>
