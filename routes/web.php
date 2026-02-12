@@ -1,6 +1,6 @@
 <?php
 
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
@@ -13,6 +13,9 @@ Route::get('/mi-nombre', function(){
     return "Santiago";
 });
 
+Route::get('/contact', function(){
+     return view('form');
+});
 
 Route::get('/php-basico', function(){
 
